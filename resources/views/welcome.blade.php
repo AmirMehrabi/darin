@@ -207,7 +207,7 @@
 
 
                         <div class="relative flex items-center w-100 w-full content-center">
-                            <div class="stepper">
+                            <div class="stepper mx-auto">
                                 <div class="step" :class="{ 'active': currentStep >= 1 }">
                                     <div class="step-icon">1</div>
                                     <div class="step-label">@{{ selectedService.name }}</div>
@@ -233,7 +233,7 @@
                         <!-- Form -->
                         <form @submit.prevent="handleSubmit">
                             <!-- Step 1 -->
-                            <div class="p-4 bg-white" v-if="currentStep === 1">
+                            <div class="bg-white rounded-lg shadow p-6" v-if="currentStep === 1">
                                 <h2 class="text-lg font-bold">Step 1: User Information</h2>
                                 <div class="mb-4">
 
@@ -249,11 +249,11 @@
                                         class="text-red-500 text-sm">@{{ errors.username }}</span> --}}
                                 </div>
                                 <button type="button" @click="nextStep"
-                                    class="mt-4 bg-transparent border border-black text-black py-2 px-4 rounded hover:bg-black hover:text-white transition duration-300">Next</button>
+                                    class="mt-4 bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-500">Next</button>
                             </div>
 
                             <!-- Step 2 -->
-                            <div class="p-4 bg-white" v-if="currentStep === 2">
+                            <div class="bg-white rounded-lg shadow p-6" v-if="currentStep === 2">
                                 <h2 class="text-lg font-bold">Step 2: Contact Information</h2>
                                 <div class="mb-4">
                                     <div class="mb-4">
@@ -309,13 +309,13 @@
                                     </div>
                                 </div>
                                 <button type="button" @click="prevStep"
-                                    class="mt-4 bg-transparent border border-black text-black py-2 px-4 rounded hover:bg-black hover:text-white transition duration-300">Previous</button>
+                                    class="mt-4 bg-transparent border mr-2 border-black text-black py-2 px-4 rounded hover:bg-black hover:text-white transition duration-300">Previous</button>
                                 <button type="button" @click="nextStep"
-                                    class="mt-4 bg-transparent border border-black text-black py-2 px-4 rounded hover:bg-black hover:text-white transition duration-300">Next</button>
+                                    class="mt-4 bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-500">Next</button>
                             </div>
 
                             <!-- Step 3 -->
-                            <div class="p-4 bg-white" v-if="currentStep === 3">
+                            <div class="bg-white rounded-lg shadow p-6" v-if="currentStep === 3">
                                 <h2 class="text-lg font-bold">Step 3: Subscriber Information</h2>
                                 <div class="mb-4">
                                     <label for="card_name" class="block text-gray-700">Name on Card</label>
@@ -350,13 +350,13 @@
                                     </div>
                                 </div>
                                 <button type="button" @click="prevStep"
-                                    class="mt-4 bg-transparent border border-black text-black py-2 px-4 rounded hover:bg-black hover:text-white transition duration-300">Previous</button>
+                                    class="mt-4 bg-transparent border border-black mr-2 text-black py-2 px-4 rounded hover:bg-black hover:text-white transition duration-300">Previous</button>
                                 <button type="button" @click="nextStep"
-                                    class="mt-4 bg-transparent border border-black text-black py-2 px-4 rounded hover:bg-black hover:text-white transition duration-300">Next</button>
+                                    class="mt-4 bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-500">Next</button>
                             </div>
 
                             <!-- Step 3 -->
-                            <div class="p-4 bg-white" v-if="currentStep === 4">
+                            <div class="bg-white rounded-lg shadow p-6" v-if="currentStep === 4">
                                 <h2 class="text-lg font-bold">Step 4: Confirmation</h2>
                                 <h2 class="text-lg font-semibold mb-4">@{{ selectedService.name }}</h2>
                                 <p class="mb-6">@{{ selectedService.description }}</p>
@@ -380,9 +380,9 @@
                                     </div>
                                 </div>
                                 <button type="button" @click="prevStep"
-                                    class="mt-4 bg-transparent border border-black text-black py-2 px-4 rounded hover:bg-black hover:text-white transition duration-300">Previous</button>
+                                    class="mt-4 bg-transparent border border-black text-black py-2 px-4 mr-2 rounded hover:bg-black hover:text-white transition duration-300">Previous</button>
                                 <button type="submit"
-                                    class="mt-4 bg-transparent border border-black text-black py-2 px-4 rounded hover:bg-black hover:text-white transition duration-300">Submit</button>
+                                    class="mt-4 bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-500">Submit</button>
                             </div>
                         </form>
 
